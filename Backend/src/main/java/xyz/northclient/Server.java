@@ -36,7 +36,7 @@ public class Server extends WebSocketServer {
     }
     public Server() {
         super(new InetSocketAddress("0.0.0.0",43112));
-        client = MongoClients.create("mongodb+srv://Aksioo:jebazdyzow@cwel.k1hkpqf.mongodb.net/myFirstDatabase");;
+        client = MongoClients.create("mongodb+srv://tecnessino:dentaparuwa123@glorium.k1hkpqf.mongodb.net/myFirstDatabase");;
         database = client.getDatabase("myFirstDatabase");
     }
     @Override

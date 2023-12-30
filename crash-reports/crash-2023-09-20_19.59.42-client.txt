@@ -1,0 +1,95 @@
+---- Minecraft Crash Report ----
+// I let you down. Sorry :(
+
+Time: 20.09.23 19:59
+Description: Updating screen events
+
+java.util.NoSuchElementException: No value present
+	at java.util.Optional.get(Optional.java:135)
+	at xyz.northclient.features.Modules.get(Modules.java:48)
+	at xyz.northclient.commands.impl.CommandBind.execute(CommandBind.java:26)
+	at xyz.northclient.commands.CommandManager.onSendMessage(CommandManager.java:37)
+	at net.minecraft.client.entity.EntityPlayerSP.sendChatMessage(EntityPlayerSP.java:298)
+	at net.minecraft.client.gui.GuiScreen.sendChatMessage(GuiScreen.java:485)
+	at net.minecraft.client.gui.GuiScreen.sendChatMessage(GuiScreen.java:475)
+	at net.minecraft.client.gui.GuiChat.keyTyped(GuiChat.java:135)
+	at net.minecraft.client.gui.GuiScreen.handleKeyboardInput(GuiScreen.java:625)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:576)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1783)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1110)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:426)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.util.Optional.get(Optional.java:135)
+	at xyz.northclient.features.Modules.get(Modules.java:48)
+	at xyz.northclient.commands.impl.CommandBind.execute(CommandBind.java:26)
+	at xyz.northclient.commands.CommandManager.onSendMessage(CommandManager.java:37)
+	at net.minecraft.client.entity.EntityPlayerSP.sendChatMessage(EntityPlayerSP.java:298)
+	at net.minecraft.client.gui.GuiScreen.sendChatMessage(GuiScreen.java:485)
+	at net.minecraft.client.gui.GuiScreen.sendChatMessage(GuiScreen.java:475)
+	at net.minecraft.client.gui.GuiChat.keyTyped(GuiChat.java:135)
+	at net.minecraft.client.gui.GuiScreen.handleKeyboardInput(GuiScreen.java:625)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:576)
+
+-- Affected screen --
+Details:
+	Screen name: net.minecraft.client.gui.GuiChat
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['jarokaczka342'/256, l='MpServer', x=82,52, y=74,00, z=236,16]]
+	Chunk stats: MultiplayerChunkCache: 261, 261
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: 80,00,64,00,248,00 - World: (80,64,248), Chunk: (at 0,4,8 in 5,15; contains blocks 80,0,240 to 95,255,255), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 1176 game time, 1176 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 82 total; [EntityChicken['Chicken'/74, l='MpServer', x=10,50, y=87,00, z=273,50], EntityChicken['Chicken'/75, l='MpServer', x=8,50, y=80,00, z=273,50], EntityChicken['Chicken'/76, l='MpServer', x=9,50, y=84,00, z=273,50], EntityChicken['Chicken'/77, l='MpServer', x=9,50, y=80,00, z=274,50], EntityWolf['Wolf'/98, l='MpServer', x=40,50, y=78,00, z=221,50], EntityWolf['Wolf'/99, l='MpServer', x=40,50, y=75,00, z=225,50], EntityWolf['Wolf'/100, l='MpServer', x=41,50, y=74,00, z=226,50], EntityWolf['Wolf'/101, l='MpServer', x=40,50, y=73,00, z=229,50], EntityWolf['Wolf'/105, l='MpServer', x=44,50, y=93,00, z=316,50], EntityWolf['Wolf'/110, l='MpServer', x=58,50, y=82,00, z=182,50], EntityWolf['Wolf'/111, l='MpServer', x=56,50, y=77,00, z=181,50], EntityWolf['Wolf'/112, l='MpServer', x=56,50, y=77,00, z=179,50], EntityWolf['Wolf'/113, l='MpServer', x=56,50, y=77,00, z=175,50], EntityWolf['Wolf'/114, l='MpServer', x=58,50, y=77,00, z=265,50], EntityWolf['Wolf'/115, l='MpServer', x=66,22, y=77,00, z=267,22], EntityWolf['Wolf'/116, l='MpServer', x=61,91, y=83,00, z=265,63], EntityWolf['Wolf'/117, l='MpServer', x=60,91, y=84,00, z=265,53], EntityWolf['Wolf'/149, l='MpServer', x=97,50, y=69,00, z=171,50], EntityWolf['Wolf'/150, l='MpServer', x=97,44, y=70,00, z=169,94], EntityWolf['Wolf'/151, l='MpServer', x=97,50, y=68,00, z=173,50], EntityWolf['Wolf'/152, l='MpServer', x=97,50, y=70,00, z=176,50], EntityWolf['Wolf'/176, l='MpServer', x=133,50, y=68,00, z=181,50], EntityWolf['Wolf'/177, l='MpServer', x=132,50, y=68,00, z=181,50], EntityWolf['Wolf'/178, l='MpServer', x=133,50, y=68,00, z=178,50], EntityWolf['Wolf'/179, l='MpServer', x=133,50, y=68,00, z=182,50], EntityWolf['Wolf'/180, l='MpServer', x=134,50, y=70,00, z=270,50], EntityWolf['Wolf'/181, l='MpServer', x=133,50, y=70,00, z=273,50], EntityWolf['Wolf'/182, l='MpServer', x=134,50, y=70,00, z=275,50], EntityWolf['Wolf'/183, l='MpServer', x=133,50, y=70,00, z=275,50], EntityBat['Bat'/290, l='MpServer', x=42,75, y=58,97, z=162,38], EntitySkeleton['Skeleton'/6441, l='MpServer', x=82,28, y=26,00, z=288,47], EntityPlayerSP['jarokaczka342'/256, l='MpServer', x=82,52, y=74,00, z=236,16], EntitySkeleton['Skeleton'/6442, l='MpServer', x=86,50, y=26,00, z=286,50], EntitySkeleton['Skeleton'/6443, l='MpServer', x=80,00, y=26,00, z=290,50], EntitySkeleton['Skeleton'/6444, l='MpServer', x=87,28, y=26,33, z=288,63], EntitySkeleton['Skeleton'/312, l='MpServer', x=129,50, y=20,00, z=246,13], EntityBat['Bat'/6592, l='MpServer', x=24,56, y=14,08, z=286,49], EntityBat['Bat'/6615, l='MpServer', x=2,63, y=34,25, z=195,38], EntitySkeleton['Skeleton'/6669, l='MpServer', x=136,50, y=25,00, z=198,50], EntityBat['Bat'/541, l='MpServer', x=9,78, y=24,34, z=174,25], EntityBat['Bat'/6700, l='MpServer', x=99,03, y=33,97, z=162,53], EntityBat['Bat'/6702, l='MpServer', x=97,63, y=33,56, z=157,72], EntitySkeleton['Skeleton'/6733, l='MpServer', x=43,50, y=58,00, z=268,50], EntitySkeleton['Skeleton'/6734, l='MpServer', x=42,50, y=58,00, z=271,50], EntityBat['Bat'/607, l='MpServer', x=142,44, y=33,88, z=160,09], EntityBat['Bat'/647, l='MpServer', x=125,25, y=30,00, z=188,56], EntityZombie['Zombie'/663, l='MpServer', x=7,50, y=35,00, z=198,50], EntityCreeper['Creeper'/669, l='MpServer', x=101,50, y=33,00, z=180,50], EntityZombie['Zombie'/6840, l='MpServer', x=136,25, y=57,00, z=186,50], EntityZombie['Zombie'/6841, l='MpServer', x=135,28, y=56,00, z=186,47], EntityCreeper['Creeper'/717, l='MpServer', x=56,50, y=48,00, z=162,50], EntityCreeper['Creeper'/720, l='MpServer', x=54,50, y=48,00, z=163,50], EntityCreeper['Creeper'/721, l='MpServer', x=54,50, y=48,00, z=164,50], EntitySkeleton['Skeleton'/750, l='MpServer', x=1,50, y=32,00, z=192,50], EntitySpider['Spider'/6904, l='MpServer', x=21,50, y=24,00, z=231,50], EntitySkeleton['Skeleton'/6906, l='MpServer', x=23,50, y=24,00, z=229,50], EntitySkeleton['Skeleton'/6907, l='MpServer', x=25,50, y=24,00, z=230,50], EntitySkeleton['Skeleton'/6908, l='MpServer', x=24,50, y=24,00, z=231,50], EntityZombie['Zombie'/6985, l='MpServer', x=2,50, y=34,00, z=165,50], EntitySkeleton['Skeleton'/863, l='MpServer', x=35,81, y=42,00, z=294,38], EntityCreeper['Creeper'/986, l='MpServer', x=129,50, y=36,00, z=170,69], EntityCreeper['Creeper'/987, l='MpServer', x=136,72, y=36,00, z=170,16], EntitySkeleton['Skeleton'/7143, l='MpServer', x=50,50, y=29,00, z=245,50], EntitySkeleton['Skeleton'/7144, l='MpServer', x=51,50, y=29,00, z=250,50], EntitySpider['Spider'/7146, l='MpServer', x=3,50, y=15,00, z=299,50], EntityZombie['Zombie'/1094, l='MpServer', x=59,50, y=26,00, z=260,50], EntityZombie['Zombie'/1095, l='MpServer', x=59,50, y=26,00, z=258,50], EntityCreeper['Creeper'/1104, l='MpServer', x=50,50, y=48,00, z=162,50], EntityCreeper['Creeper'/7264, l='MpServer', x=53,50, y=24,00, z=291,50], EntityCreeper['Creeper'/1143, l='MpServer', x=81,50, y=29,00, z=272,50], EntityCreeper['Creeper'/1144, l='MpServer', x=85,50, y=29,00, z=274,50], EntityItem['item.tile.doublePlant.syringa'/5329, l='MpServer', x=106,16, y=70,00, z=224,91], EntityZombie['Zombie'/1670, l='MpServer', x=7,50, y=52,00, z=245,50], EntityCreeper['Creeper'/1672, l='MpServer', x=9,50, y=52,00, z=246,50], EntityCreeper['Creeper'/1684, l='MpServer', x=-0,50, y=59,00, z=287,50], EntityCreeper['Creeper'/1691, l='MpServer', x=46,50, y=28,00, z=278,50], EntitySpider['Spider'/1813, l='MpServer', x=81,81, y=26,00, z=290,50], EntitySkeleton['Skeleton'/1862, l='MpServer', x=38,50, y=52,00, z=166,50], EntitySkeleton['Skeleton'/6045, l='MpServer', x=134,91, y=21,00, z=230,53], EntityZombie['Zombie'/6072, l='MpServer', x=80,50, y=29,00, z=197,50], EntityBat['Bat'/6109, l='MpServer', x=38,69, y=23,04, z=270,93], EntityBat['Bat'/6110, l='MpServer', x=33,47, y=12,00, z=289,59]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:390)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2758)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:447)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.8
+	Operating System: Windows 10 (amd64) version 10.0
+	CPU: 12x 11th Gen Intel(R) Core(TM) i5-11400F @ 2.60GHz
+	Java Version: 1.8.0_301, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 140759912 bytes (134 MB) / 1063256064 bytes (1014 MB) up to 3793747968 bytes (3618 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: NVIDIA GeForce GTX 1050/PCIe/SSE2 GL version 4.6.0 NVIDIA 536.40, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: ~~ERROR~~ NullPointerException: null
+	Profiler Position: N/A (disabled)
+	CPU: 12x 11th Gen Intel(R) Core(TM) i5-11400F @ 2.60GHz

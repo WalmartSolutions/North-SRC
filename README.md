@@ -5,6 +5,8 @@
 # Why?
 There is no release yet and it will take them another 5 years to make a release so we are releasing for you guyzzz!!!
 
+PS: Shit is slightly outdated but who cares. Had to release something on the new year ykyk 🗿
+
 # Credits
 
 Qreaj, Groszus, Tecnessino - Making the client. <br>

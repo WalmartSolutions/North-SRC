@@ -1,4 +1,4 @@
-<h1 align="center">North Recode(Новый год Edition)</h1>
+<h1 align="center">North (Новый год Edition)</h1>
 
 **Trillium INC: https://discord.gg/vzXzFpv2gk**
 
